@@ -9,7 +9,7 @@ spec:
       matchExpressions:
       - {key: os, operator: In, values: [darwin, linux]}
     # url for downloading the package archive:
-    uri: https://github.com/ishantanu/kubectl-unbound-pvc/releases/v1.0.zip
+    uri: https://github.com/ishantanu/kubectl-unbound-pvc/releases/download/v0.0.1/kubectl-unbound_pvc.zip
     # sha256sum of the above archive file:
     sha256: "2dd03b36aa2f9fe2177847525dab5d4e97400f26ff6c6d91e2d71147c761e25e"
     # copy the used files out of the zip archive, defaults to `[{from: "*", to: "."}]`
