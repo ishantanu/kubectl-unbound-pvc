@@ -35,7 +35,7 @@ unbound_pvc() {
 	for u_pvc_all in ${cmd1};
 	do
                 if [[ ${u_pvc_all} != "Bound" ]]; then
-	        	kubectl get pvc --all-namespaces -o=custom-columns='NAME:.metadata.name,STATUS:.status.phase'
+	        	kubectl get pvc --all-namespaces -o=custom-columns='NAME:.metadata.name,STATUS:.status.phase' | awk '$2!="Bound"'
                 fi
 	done
 
@@ -45,7 +45,7 @@ unbound_pvc() {
 	for u_pvc_ns in ${cmd1};
 	do
 		if [[ ${u_pvc_ns} != "Bound" ]]; then
-			kubectl get pvc -n "${namespace}" -o=custom-columns='NAME:.metadata.name,STATUS:.status.phase'
+			kubectl get pvc -n "${namespace}" -o=custom-columns='NAME:.metadata.name,STATUS:.status.phase' | awk '$2!="Bound"'
 		fi
 	done
     fi
