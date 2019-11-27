@@ -9,7 +9,7 @@ spec:
       matchExpressions:
       - {key: os, operator: In, values: [darwin, linux]}
     uri: https://github.com/ishantanu/kubectl-unbound-pvc/archive/v0.0.1.zip
-    sha256: "2fe43eb6861be64593ab2fedc9e87a852dd45bbb676b08c5c49bfe33a14b79ee"
+    sha256: "e992b2d6150c70b466b99dd767f4b0c1eacb3deb6719cfe580bdebfe8987448a"
     files:
     - from: "./kubectl-unbound-pvc-*/kubectl-unbound_pvc"
       to:  "."                 
